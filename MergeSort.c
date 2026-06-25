@@ -11,13 +11,13 @@ uint64_t start, end;// Global variables to store the CPU clock cycle timestamps 
 
 int main (void) {
   int i;
-  int v[10000] = {}; // Declaration of an array to ordered(can have any number of elements, now it is size 10000, but the size may increase or decrease depending on the demand)
+  int v[10000] = {}; // Declaration of an array to be sorted(can have any number of elements, now it is size 10000, but the size may increase or decrease depending on the demand)
    //You can paste the numbers in the array manually
-  start = __rdtsc();// Starts the timer of how much time(measured in CPU clock ticks) it takes to order(max measurement time limited to a long int)
+  start = __rdtsc();// Starts the timer of how much time(measured in CPU clock ticks) it takes to sort(max measurement time limited to a long int)
   
   mergesort(v, 10000);// Calls the Merge Sort Function giving it its array and size , it says it is size 10000,but the size may increase or decrease depending on the demand
 
-  end = __rdtsc();// Finishes the timer of ordering
+  end = __rdtsc();// Finishes the timer of sorting
   
   for (i = 0; i < 10000; i++) printf("%d ", v[i]);// Loop to print all the elements sorted
   putchar('\n');//breaks line
@@ -29,7 +29,7 @@ int main (void) {
 
 
 void mergesort(int *v, int n) {  // Merge Sort interface function: Memory allocs the auxiliary vector and starts recursion
-  int *c = malloc(sizeof(int) * n);// Dynamic allocates a temporary vector 'c' with the same size of the original unordered array 
+  int *c = malloc(sizeof(int) * n);// Dynamic allocates a temporary vector 'c' with the same size of the original unsorted array 
   sort(v, c, 0, n - 1);// Starts recursive function of dividing going through initial (0) index to last index (n - 1)
   free(c);// Frees auxiliary vector in memory 
 }
