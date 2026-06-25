@@ -44,14 +44,14 @@ void sort(int *v, int *c, int i, int f) {// Recursive function dividing vector  
   sort(v, c, m + 1, f);// Recursively divides the second half (middle to end)
 
   
-  if (v[m] <= v[m + 1]) return;// Optimization: If greatenst element of the first half is smaller of equal to the amaller of the second half,
+  if (v[m] <= v[m + 1]) return;// Optimization: If greatest element of the first half is smaller of equal to the amaller of the second half,
                               // it means  that this part is perfectly ordered , not need interspersing 
-  merge(v, c, i, m, f);// Intersperse the two ordered halves in one sigle ordered part ordenado
+  merge(v, c, i, m, f);// Intersperse the two sorted halves in one sigle sorted part 
 }
 
 
 
-void merge(int *v, int *c, int i, int m, int f) {// Function interspersing(conbining) two ordered sub-lists back to the original array 
+void merge(int *v, int *c, int i, int m, int f) {// Function interspersing(conbining) two sorted sub-lists back to the original array 
   int z,                      // Index to go through the first half of the auxiliary vector  
       iv = i, ic = m + 1;     // Index to go through the second half of the auxiliary vector
 
