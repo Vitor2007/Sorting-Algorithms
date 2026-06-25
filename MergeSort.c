@@ -20,7 +20,7 @@ int main (void) {
   end = __rdtsc();// Finishes the timer of ordering
   
   for (i = 0; i < 10000; i++) printf("%d ", v[i]);// Loop to print all the elements sorted
-  putchar('\n');//quebra de linha
+  putchar('\n');//breaks line
 
   printf("CPU clock ticks consumed: %lu\n", (end - start));// Prints all the CPU clock ticks consumed
   
