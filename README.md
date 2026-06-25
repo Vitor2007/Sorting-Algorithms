@@ -1,2 +1,2 @@
 # Sorting-Algorithms
-Some Sorting Algorithms in C
+Some sorting algorithms in C with an measurement of CPU clock ticks included
