@@ -43,7 +43,7 @@ int main() {
     
     int data[100000] = {}; // Array to be sorted (size can change according to current need)
 
-    for(int i = 99999; i > -1; i--){
+    for(int i = 99999; i > -1; i--){ //it starts at 99999 since it is the end of the declared array, butmif the array has another size, this initial 'i' needs to be changed
         data[i] = i;
     }
                         int n = sizeof(data) / sizeof(data[0]);// Gets the size of the array
