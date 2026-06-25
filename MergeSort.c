@@ -16,10 +16,10 @@ int main (void) {
   start = __rdtsc();// Starts the timer of how much time(measured in CPU clock ticks) it takes to sort(max measurement time limited to a long int)
   
   mergesort(v, 10000);// Calls the Merge Sort Function giving it its array and size , it says it is size 10000,but the size may increase or decrease depending on the demand
-
+  //the function called is given the sizer 10000 since it is the size of the array , if the array is diferent, the size given needs to change accondingly 
   end = __rdtsc();// Finishes the timer of sorting
   
-  for (i = 0; i < 10000; i++) printf("%d ", v[i]);// Loop to print all the elements sorted
+  for (i = 0; i < 10000; i++) printf("%d ", v[i]);// Loop to print all the elements sorted, the end the for loop is  10000 since it is the size of the array , if the array is diferent, the end given needs to change accondingly
   putchar('\n');//breaks line
 
   printf("CPU clock ticks consumed: %lu\n", (end - start));// Prints all the CPU clock ticks consumed
